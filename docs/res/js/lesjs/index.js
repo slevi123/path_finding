@@ -6,8 +6,11 @@ function createNotification(){
     var notification = new Notification('To do list', { body: text, icon: img });
 }
 
+
+
 if (Notificatio.permission == "granted"){
     createNotification();
+
 } else {
     Notification.requestPermission().then(function(result) {
         if (result="granted"){
